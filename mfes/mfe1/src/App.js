@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
-import CartApp from 'app2/App';
+// import CartApp from 'app2/App';
 
-// const CartApp = React.lazy(() => import("app2/App"));
+const CartApp = React.lazy(() => import("app2/App"));
 
 const App = () => {
   return (
@@ -16,9 +16,9 @@ const App = () => {
       >
         <h1>Product Listing</h1>
       </div>
-      {/* <Suspense fallback="Loading..."> */}
+      <Suspense fallback="Loading...">
         <CartApp />
-      {/* </Suspense> */}
+      </Suspense>
     </div>
   );
 };
